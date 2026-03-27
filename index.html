@@ -1,0 +1,304 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr" id="html-root">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Makarious &amp; Martina</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=Amiri:wght@400;700&family=Outfit:wght@300;400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="Style.css">
+</head>
+<body>
+
+  <!-- ═══ ENVELOPE OVERLAY ═══════════════════════════ -->
+  <div class="env-overlay" id="envelope-overlay">
+    <div class="env-wrap">
+      <div class="env-card" id="envelope-card">
+        <!-- ✏️ Replace cover.jpeg with your couple photo -->
+        <div class="env-body" style="background-image:url('WhatsApp Image 2026-03-20 at 10.00.56 PM.jpeg')">
+          <span class="env-monogram">M &amp; M</span>
+          <p class="env-tap" id="txt-tap">Tap to open</p>
+        </div>
+        <div class="env-flap"><span class="env-fold"></span></div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ✏️ Replace with your music file path -->
+  <audio id="bg-music" loop preload="auto" playsinline>
+    <source src="D:\work\wedding\WhatsApp Audio 2026-03-20 at 10.07.58 PM.mpeg" type="audio/mpeg">
+  </audio>
+
+  <button class="music-btn" id="music-btn">
+    <span>&#9835;</span>
+    <span id="txt-music-btn">Play music</span>
+  </button>
+
+  <!-- ═══ HEADER ══════════════════════════════════════ -->
+  <header class="site-header">
+    <nav class="nav">
+      <a href="#home" class="nav-logo">M &amp; M</a>
+      <ul class="nav-links" id="nav-links">
+        <li><a href="#home"       id="nav-home">Home</a></li>
+        <li><a href="#countdown"  id="nav-countdown">Countdown</a></li>
+        <li><a href="#details"    id="nav-details">Details</a></li>
+        <li><a href="#invitation" id="nav-invitation">Invitation</a></li>
+        <li><a href="#video"      id="nav-video">Video</a></li>
+        <li><a href="#gallery"    id="nav-gallery">Gallery</a></li>
+        <li><a href="#guestbook" id="nav-guestbook">Guestbook</a></li>
+      </ul>
+      <button class="lang-toggle" id="lang-toggle">Arabic</button>
+      <button class="nav-toggle"  id="nav-toggle">&#9776;</button>
+    </nav>
+  </header>
+
+  <main>
+
+    <!-- ═══ HERO ════════════════════════════════════════ -->
+    <section id="home" class="hero">
+      <!-- ✏️ Replace cover.jpeg with your cover photo -->
+      <div class="hero-bg" style="background-image:url('WhatsApp Image 2026-03-20 at 10.12.32 PM.jpeg')"></div>
+      <div class="hero-content">
+        <p class="hero-eyebrow" id="txt-hero-sub">We are getting married</p>
+        <h1 class="hero-title">
+          Makarious
+          <span class="hero-amp">&amp;</span>
+          Martina
+        </h1>
+        <p class="hero-date">25 &middot; 04 &middot; 2026</p>
+        <a href="#countdown" class="btn btn-hero" id="txt-hero-cta">See countdown</a>
+      </div>
+      <a href="#countdown" class="hero-scroll" aria-label="Scroll down">
+        <span></span><span></span>
+      </a>
+    </section>
+
+    <!-- ═══ COUNTDOWN + CALENDAR ════════════════════════ -->
+    <section id="countdown" class="s-countdown">
+      <div class="inner narrow">
+        <h2 class="section-title" id="txt-countdown-title">Counting the days</h2>
+        <div class="countdown-grid">
+          <div class="cd-item">
+            <span class="cd-val" id="cd-days">0</span>
+            <span class="cd-lbl" id="txt-days">Days</span>
+          </div>
+          <div class="cd-item">
+            <span class="cd-val" id="cd-hours">0</span>
+            <span class="cd-lbl" id="txt-hours">Hours</span>
+          </div>
+          <div class="cd-item">
+            <span class="cd-val" id="cd-mins">0</span>
+            <span class="cd-lbl" id="txt-mins">Minutes</span>
+          </div>
+          <div class="cd-item">
+            <span class="cd-val" id="cd-secs">0</span>
+            <span class="cd-lbl" id="txt-secs">Seconds</span>
+          </div>
+        </div>
+        <div class="cal-wrap">
+          <h3 class="cal-title" id="cal-title">April 2026</h3>
+          <div class="cal-weekdays" id="cal-weekdays"></div>
+          <div class="cal-days"     id="cal-days"></div>
+          <p class="cal-legend">
+            <span class="cal-dot"></span>
+            <span id="txt-wedding-day">Wedding day &mdash; 25 April 2026</span>
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- ═══ DETAILS ═════════════════════════════════════ -->
+    <section id="details" class="s-details">
+      <div class="inner">
+        <div class="details-card">
+          <h2 class="section-title" id="txt-details-title">Wedding details</h2>
+          <div class="details-grid">
+
+            <div class="d-item">
+              <span class="d-label" id="txt-lbl-date">Date</span>
+              <span class="d-value" id="txt-date">Saturday, 25 April 2026</span>
+            </div>
+
+            <div class="d-item">
+              <span class="d-label" id="txt-lbl-time">Time</span>
+              <span class="d-value" id="txt-time">7 : 00 PM</span>
+            </div>
+
+            <div class="d-item d-full">
+              <span class="d-label" id="txt-lbl-church">Holy Ceremony</span>
+              <!-- ✏️ Your church name -->
+              <span class="d-value" id="txt-church-name"> كنيسة الشهيد ابي سفين بسفاجا</span>
+              <!-- ✏️ Your church address & time -->
+              <span class="d-soft"  id="txt-church-addr">Address &middot; Time</span>
+              <!-- ✏️ Update href to your Google Maps link -->
+              <a class="d-map" href="https://maps.app.goo.gl/HuPjZdeABnSi7F48A?g_st=aw" target="_blank" id="txt-church-map">
+                Open in Google Maps &#8599;
+              </a>
+            </div>
+
+            <div class="d-item d-full">
+              <span class="d-label" id="txt-lbl-hall">Wedding Reception</span>
+              <!-- ✏️ Your hall name -->
+              <span class="d-value" id="txt-hall-name">Hall Name</span>
+              <!-- ✏️ Your hall address & time -->
+              <span class="d-soft"  id="txt-hall-addr">Address &middot; Time</span>
+              <!-- ✏️ Update href to your Google Maps link -->
+              <a class="d-map" href="https://maps.app.goo.gl/nAbGouu4jS35MpZ47?g_st=aw" target="_blank" id="txt-hall-map">
+                Open in Google Maps &#8599;
+              </a>
+            </div>
+
+          </div>
+
+        <!--
+          <blockquote class="verse">
+            <p class="verse-text" id="txt-verse">
+              "And above all these put on love, which binds everything together in perfect harmony."
+            </p>
+            <cite class="verse-ref" id="txt-verse-ref">Colossians 3:14</cite>
+          </blockquote>
+          
+          ✏️ Replace with your church photo 
+          <div class="church-photo-wrap">
+            <img src="assets/church.jpeg" alt="Church" loading="lazy">
+          </div>
+        -->  
+        </div>
+      </div>
+    </section>
+
+    <!-- ═══ INVITATION IMAGE ═════════════════════════════
+         Place your printed wedding invitation photo here.
+         Replace invitation.jpeg with your actual file.
+    ═══════════════════════════════════════════════════ -->
+    <section id="invitation" class="s-invitation">
+      <div class="inner narrow">
+        <h2 class="section-title" id="txt-inv-title">Wedding Invitation</h2>
+        <div class="inv-frame">
+          <!--
+            ✏️  Replace invitation.jpeg with your invitation image:
+            <img src="assets/invitation.jpeg" alt="Wedding Invitation" class="inv-img">
+
+            Or use a scanned PDF page / photo of your printed card.
+          -->
+          <div class="inv-placeholder" id="inv-placeholder">
+
+            <img src="D:\work\wedding\Brown and Beige Illustrated Wedding Invitation.png" alt="Wedding Invitation" class="inv-img">
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ═══ VIDEO ════════════════════════════════════════ -->
+    <section id="video" class="s-video">
+      <div class="inner">
+        <h2 class="section-title" id="txt-video-title">Video Invitation</h2>
+        <div class="video-wrap">
+          
+          <video class="wedding-video" controls playsinline>
+            <source src="D:\work\wedding\final 2.mp4" type="video/mp4">
+          </video>
+          
+          <!--
+            ✏️  Option B — YouTube (delete placeholder div):
+            <iframe class="yt-embed"
+              src="https://www.youtube.com/embed/YOUR_VIDEO_ID?rel=0&enablejsapi=1"
+              frameborder="0" allowfullscreen allow="autoplay; encrypted-media">
+            </iframe>
+            <div class="video-ph-btn">&#9654;</div>
+
+            NOTE: background music pauses automatically when video plays.
+          -->
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ═══ GALLERY ═════════════════════════════════════ -->
+    <section id="gallery" class="s-gallery">
+      <div class="inner">
+        <h2 class="section-title" id="txt-gallery-title">Gallery</h2>
+        <p class="section-desc" id="txt-gallery-desc">Photos from our memories</p>
+        <div class="gallery-grid">
+          <!--
+            ✏️  Replace each ph-card with:
+            <div class="photo-card">
+              <img src="assets/photos/1.jpeg" alt="" loading="lazy">
+            </div>
+          -->
+           <div class="photo-card">
+              <img src="D:\work\wedding\WhatsApp Image 2026-03-20 at 10.00.56 PM.jpeg" alt="" loading="lazy">
+           </div>
+           <div class="photo-card">
+              <img src="D:\work\wedding\WhatsApp Image 2026-03-20 at 10.00.57 PM (1).jpeg" alt="" loading="lazy">
+           </div> <div class="photo-card">
+              <img src="D:\work\wedding\WhatsApp Image 2026-03-20 at 10.00.57 PM (2).jpeg" alt="" loading="lazy">
+           </div> <div class="photo-card">
+              <img src="D:\work\wedding\WhatsApp Image 2026-03-20 at 10.00.57 PM.jpeg" alt="" loading="lazy">
+           </div> <div class="photo-card">
+              <img src="D:\work\wedding\WhatsApp Image 2026-03-20 at 10.12.32 PM (1).jpeg" alt="" loading="lazy">
+           </div> <div class="photo-card">
+              <img src="D:\work\wedding\WhatsApp Image 2026-03-20 at 10.12.32 PM (2).jpeg" alt="" loading="lazy">
+           </div> <div class="photo-card">
+              <img src="D:\work\wedding\WhatsApp Image 2026-03-20 at 10.12.32 PM.jpeg" alt="" loading="lazy">
+           </div>
+        </div>
+      </div>
+    </section>
+<section id="guestbook" class="s-guestbook">
+  <div class="inner narrow">
+ 
+    <h2 class="section-title" id="txt-gb-title">Guestbook</h2>
+    <p class="section-desc" id="txt-gb-desc">Leave us a blessing or a kind word.</p>
+ 
+    <!-- Form -->
+    <form class="gb-form" id="gb-form" autocomplete="off">
+      <div class="gb-fields">
+ 
+        <div class="gb-field">
+          <label class="gb-label" for="gb-name" id="lbl-gb-name">Your name</label>
+          <input class="gb-input" type="text" id="gb-name"
+                 placeholder="Name" maxlength="60" required>
+        </div>
+ 
+        <div class="gb-field">
+          <label class="gb-label" for="gb-msg" id="lbl-gb-msg">Your message</label>
+          <textarea class="gb-textarea" id="gb-msg"
+                    placeholder="Wishing you a lifetime of love and joy!" maxlength="400"
+                    rows="3" required></textarea>
+          <span class="gb-chars" id="gb-chars">0 / 400</span>
+        </div>
+ 
+      </div>
+      <button class="gb-submit" type="submit" id="gb-submit-btn">
+        <span id="txt-gb-submit">Send blessing</span>
+        <span class="gb-submit-arrow">&#8594;</span>
+      </button>
+    </form>
+ 
+    <!-- Messages list -->
+    <div class="gb-messages" id="gb-messages">
+      <!-- filled by JS -->
+    </div>
+ 
+    <!-- Empty state -->
+    <div class="gb-empty" id="gb-empty" style="display:none">
+      <span class="gb-empty-icon">&#128140;</span>
+      <p id="txt-gb-empty">Be the first to leave a blessing!</p>
+    </div>
+ 
+  </div>
+</section>
+  </main>
+
+  <!-- ═══ FOOTER ══════════════════════════════════════ -->
+  <footer class="site-footer">
+    <p class="footer-names">Makarious &amp; Martina</p>
+    <div class="footer-rule"></div>
+    <p class="footer-date">25 &middot; 04 &middot; 2026</p>
+  </footer>
+
+  <script src="App.js"></script>
+</body>
+</html>
